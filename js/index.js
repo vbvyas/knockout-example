@@ -1,6 +1,6 @@
 function AppViewModel() {
-  this.firstName = "first";
-  this.lastName = "last";
+  this.firstName = ko.observable("first");
+  this.lastName = ko.observable("last");
 }
 
 // activate knockout.js
