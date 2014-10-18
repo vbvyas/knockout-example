@@ -33,6 +33,14 @@ function ReservationsViewModel() {
   self.removeSeat = function (seat) {
     self.seats.remove(seat);
   };
+
+  self.totalSurcharge = ko.computed(function () {
+    var total = 0;
+    for (var i = 0; i < self.seats().length; i++) {
+      total += self.seats()[i].meal().price;
+    }
+    return total;
+  });
 }
 
 ko.applyBindings(new ReservationsViewModel());
