@@ -5,7 +5,6 @@ function WebmailViewModel() {
   
   // behaviors
   self.goToFolder = function (folder) {
-    console.log('folder', folder);
     self.chosenFolderId(folder);
   };
 };
