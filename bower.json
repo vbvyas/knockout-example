@@ -1,0 +1,27 @@
+{
+  "name": "knockout-example",
+  "version": "0.0.0",
+  "homepage": "https://github.com/vbvyas/knockout-example",
+  "description": "knockoutjs example",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "knockout"
+  ],
+  "authors": [
+    "vbvyas"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "knockout": "~3.2.0"
+  }
+}
