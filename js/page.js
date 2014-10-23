@@ -8,13 +8,10 @@ function WebmailViewModel() {
   self.goToFolder = function (folder) {
     self.chosenFolderId(folder);
     $.ajax({
-      url: 'http://learn.knockoutjs.com/mail?folder=' + folder,
-      type: 'GET',
+      url: 'http://learn.knockoutjs.com/mail?folder=' + folder + '&callback=?',
       dataType: 'jsonp',
-      crossDomain: true,
-    })
-    .done(function (data) {
-      self.chosenFolderData(data);
+      timeout: 10000,
+      success: self.chosenFolderData
     });
   };
 
