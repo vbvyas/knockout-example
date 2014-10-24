@@ -7,8 +7,9 @@ function WebmailViewModel() {
   // behaviors
   self.goToFolder = function (folder) {
     self.chosenFolderId(folder);
+    var url = 'http://learn.knockoutjs.com/mail?folder=' + folder + '&callback=?';
     $.ajax({
-      url: 'http://learn.knockoutjs.com/mail?folder=' + folder + '&callback=?',
+      url: url,
       dataType: 'jsonp',
       timeout: 10000,
       success: self.chosenFolderData
