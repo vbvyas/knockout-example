@@ -7,6 +7,10 @@ function WebmailViewModel() {
   // behaviors
   self.goToFolder = function (folder) {
     self.chosenFolderId(folder);
+    var url = './data/' + folder.toLowerCase() + '.json';
+    // need to fix this to have a backend
+    $.get(url, self.chosenFolderData);
+    /* 
     var url = 'http://learn.knockoutjs.com/mail?folder=' + folder + '&callback=?';
     $.ajax({
       url: url,
@@ -14,6 +18,7 @@ function WebmailViewModel() {
       timeout: 10000,
       success: self.chosenFolderData
     });
+    */
   };
 
   // show inbox by default
